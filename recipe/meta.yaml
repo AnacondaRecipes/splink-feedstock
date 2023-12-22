@@ -22,7 +22,6 @@ requirements:
     - pip
     - setuptools
     - wheel
-  #  - poetry >=0.12
     - altair >=5.0.1
     - attrs >=23.1.0
     - greenlet >=2.0.2
