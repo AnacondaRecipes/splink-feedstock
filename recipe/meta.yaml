@@ -10,7 +10,7 @@ source:
   sha256: 891996d3eaa6ff58cc3e3cd97c0aa0c45246a8b1c858cd4fe77f617e190f20ee
 
 build:
-  noarch: python
+  skip: true  # [py<39]
   number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
 
@@ -18,7 +18,7 @@ build:
 # https://moj-analytical-services.github.io/splink/getting_started.html#duckdb-less-installation
 requirements:
   host:
-    - python >=3.7,<4.0
+    - python
     - pip
     - setuptools
     - wheel
@@ -31,7 +31,7 @@ requirements:
     - markupsafe >=2.1.3
     - pandas >=1.3.5
     - phonetics >=1.0.5
-    - pkgutil-resolve-name >=1.3.10
+    - pkgutil-resolve-name >=1.3.10  #[py<=38]
     - psycopg2 >=2.9.7
     - py4j >=0.10.9.7
     - pyrsistent >=0.19.3
