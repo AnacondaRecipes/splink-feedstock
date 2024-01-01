@@ -6,6 +6,7 @@ channels:
   - https://staging.continuum.io/prefect/fs/zipp-feedstock/pr8/e514768
   - https://staging.continuum.io/prefect/fs/pkgutil-resolve-name-feedstock/pr2/8591607
   - https://staging.continuum.io/prefect/fs/psycopg2-feedstock/pr8/42544b8
+  - https://staging.continuum.io/prefect/fs/sqlglot-feedstock/pr3/df29352
 
 upload_channels:
   - sfe1ed40
