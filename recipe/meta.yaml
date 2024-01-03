@@ -16,6 +16,7 @@ build:
 
 # the requirements refer to the duckdb-less installation documented at
 # https://moj-analytical-services.github.io/splink/getting_started.html#duckdb-less-installation
+# https://github.com/moj-analytical-services/splink/blob/v3.9.10/scripts/duckdbless_requirements.txt
 requirements:
   host:
     - python
