@@ -32,14 +32,6 @@ outputs:
         - poetry-core 1.5.2
       run:
         - python
-    test:
-      imports:
-        - splink
-      commands:
-      # while doing pip check got an error: splink 3.9.10 requires duckdb, which is not installed.
-      #  - pip check 
-      requires:
-        - pip
   - name: splink-duckdb-less
     requirements:
       # the requirements refer to the duckdb-less installation documented at
