@@ -1,5 +1,6 @@
 {% set name = "splink" %}
 {% set version = "3.9.10" %}
+{% set duckdb_less = True %}
 
 package:
   name: {{ name|lower }}
@@ -70,6 +71,22 @@ outputs:
       #  - pip check
       requires:
         - pip
+{% if not duckdb_less %}
+  - name: splink
+    requirements:
+      run:
+        - python
+        - duckdb
+        - {{ pin_subpackage('splink-core', max_pin="x.x.x") }}
+    test:
+      imports:
+        - splink
+      commands:
+      # while doing pip check got an error: splink 3.9.10 requires duckdb, which is not installed.
+      #  - pip check
+      requires:
+        - pip
+{% endif %}
 
 about:
   home: https://splink.io
