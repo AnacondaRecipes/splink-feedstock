@@ -13,6 +13,8 @@ source:
 build:
   skip: true  # [py<38 or s390x]
   number: 0
+  patches:
+    - 0001-make-duckdb-optional.patch
 
 outputs:
   - name: splink-core
@@ -68,7 +70,7 @@ outputs:
         - splink
       commands:
       # while doing pip check got an error: splink 3.9.10 requires duckdb, which is not installed.
-      #  - pip check
+        - pip check
       requires:
         - pip
 {% if not duckdb_less %}
@@ -88,7 +90,7 @@ outputs:
         - splink
       commands:
       # while doing pip check got an error: splink 3.9.10 requires duckdb, which is not installed.
-      #  - pip check
+        - pip check
       requires:
         - pip
 {% endif %}
