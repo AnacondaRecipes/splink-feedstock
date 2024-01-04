@@ -1,6 +1,5 @@
 channels:
   - https://staging.continuum.io/prefect/fs/phonetics-feedstock/pr1/43564a7
-  - https://staging.continuum.io/prefect/fs/sqlalchemy-feedstock/pr21/c2fb6f8
 
 upload_channels:
   - sfe1ed40
