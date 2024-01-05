@@ -11,7 +11,6 @@
  phonetics = "^1.0.5"
  
  # Optional installs
-+duckdb = {version=">=0.8.0", optional=true}
  pyspark = {version="^3.2.1", optional=true}
  
  awswrangler = [
