@@ -1,0 +1,5 @@
+channels:
+  - https://staging.continuum.io/prefect/fs/phonetics-feedstock/pr1/43564a7
+
+upload_channels:
+  - sfe1ed40
