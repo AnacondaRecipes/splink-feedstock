@@ -33,7 +33,9 @@ requirements:
     - numpy >=1.26.0  # [py>=312]
   run_constrained:
     - pyspark >=3.2.1
-
+    - awswrangler >=3.0.0,<4.0.0  # [py>=38]
+    - psycopg2-binary >=2.8.0
+    - igraph >=0.11.2
 test:
   imports:
     - splink
