@@ -46,6 +46,7 @@ about:
   license_family: MIT
   license_file: LICENSE
   summary: Fast, accurate and scalable probabilistic data linkage with support for multiple SQL backends
+  dev_url: https://github.com/moj-analytical-services/splink
   doc_url: https://moj-analytical-services.github.io/splink
 
 extra:
