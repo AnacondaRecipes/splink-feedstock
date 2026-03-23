@@ -46,6 +46,9 @@ about:
   license_family: MIT
   license_file: LICENSE
   summary: Fast, accurate and scalable probabilistic data linkage with support for multiple SQL backends
+  description: |
+    Splink is a Python package for probabilistic record linkage (entity resolution) that allows
+    you to deduplicate and link records from datasets without unique identifiers.
   dev_url: https://github.com/moj-analytical-services/splink
   doc_url: https://moj-analytical-services.github.io/splink
 
