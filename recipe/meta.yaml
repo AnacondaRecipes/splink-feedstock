@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 84f4ad5a1d86c42837de60b662904c74ba27b1a8c6dde2042551dcc57ade5f25
 
 build:
@@ -39,6 +39,7 @@ requirements:
 test:
   imports:
     - splink
+  
 
 about:
   home: https://github.com/moj-analytical-services/splink
