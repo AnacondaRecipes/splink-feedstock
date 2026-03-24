@@ -6,8 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 84f4ad5a1d86c42837de60b662904c74ba27b1a8c6dde2042551dcc57ade5f25
+  url: https://github.com/moj-analytical-services/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: 91fc72e24e177bed3fa0b366d55f56c2317c0c39882af3490321ebcd7a47e1a2
 
 build:
   skip: true  # [py<38]
