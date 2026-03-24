@@ -37,14 +37,29 @@ requirements:
     - awswrangler >=3.0.0,<4.0.0
     - psycopg2 >=2.8.0
 
+{% set skip_tests = "" %}
+
+# Tests require igraph for the functionality - KeyError: 'is_bridge'
+{% set skip_tests = skip_tests + " --deselect=tests/test_graph_metrics.py::test_is_bridge" %}
+
 test:
+  source_files:
+    - tests
   imports:
     - splink
   requires:
-    - igraph
+    - pytest >=7.3
+    - pyspark
+    - psycopg2
+    - sqlalchemy >=1.4.0
+    - networkx >=2.5.1
+    - rapidfuzz >=2.0.3
+    # further constrain upper bound for the test due to dependency changes
+    - sqlglot <24
   commands:
     - pip check
     - python -c "from importlib.metadata import version; assert(version('{{ name }}')=='{{ version }}')"
+    - pytest -vv -m "not spark_only" -k "not postgres and not spark" {{ skip_tests }} tests
   
 
 about:
