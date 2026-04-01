@@ -48,6 +48,7 @@ test:
   imports:
     - splink
   requires:
+    - pip
     - pytest >=7.3
     - pyspark
     - psycopg2
