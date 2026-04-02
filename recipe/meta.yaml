@@ -58,8 +58,13 @@ requirements:
 {% set skip_tests = skip_tests + " --deselect=tests/test_new_db_api.py" %}  # [py>=313 and unix]
 {% set skip_tests = skip_tests + " --deselect=tests/test_settings_options.py" %}  # [py>=313 and unix]
 {% set skip_tests = skip_tests + " --deselect=tests/test_train_vs_predict.py" %}  # [py>=313 and unix]
-{% set skip_tests = skip_tests + " --deselect=tests/test_realtime.py::test_realtime_cache_two_records" %}  # [py>=313 and unix]
-{% set skip_tests = skip_tests + " --deselect=tests/test_realtime.py::test_realtime_cache_multiple_records" %}  # [py>=313 and unix]
+
+{% set skip_tests = skip_tests + " --deselect=tests/test_realtime.py::test_realtime_cache_two_records" %}  # [py>=313]
+{% set skip_tests = skip_tests + " --deselect=tests/test_realtime.py::test_realtime_cache_multiple_records" %}  # [py>=313]
+
+# Known limitation - SQLite python module on Windows doesn't contain math function acos needed for this test.
+# SQLITE_ENABLE_MATH_FUNCTIONS not enabled in sqlite3 (see: https://sqlite.org/lang_mathfunc.html).
+{% set skip_tests = skip_tests + " --deselect=tests/test_km_distance_level.py::test_km_distance_levels[sqlite]" %}  # [win]
 
 test:
   source_files:
