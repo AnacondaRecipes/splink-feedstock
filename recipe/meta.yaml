@@ -58,8 +58,8 @@ requirements:
 {% set skip_tests = skip_tests + " --deselect=tests/test_new_db_api.py" %}  # [py>=313 and unix]
 {% set skip_tests = skip_tests + " --deselect=tests/test_settings_options.py" %}  # [py>=313 and unix]
 {% set skip_tests = skip_tests + " --deselect=tests/test_train_vs_predict.py" %}  # [py>=313 and unix]
-{% set skip_tests = skip_tests + " --deselect=tests/test_realtime_cache_two_records.py" %}  # [py>=313 and unix]
-{% set skip_tests = skip_tests + " --deselect=tests/test_realtime_cache_multiple_records.py" %}  # [py>=313 and unix]
+{% set skip_tests = skip_tests + " --deselect=tests/test_realtime.py::test_realtime_cache_two_records" %}  # [py>=313 and unix]
+{% set skip_tests = skip_tests + " --deselect=tests/test_realtime.py::test_realtime_cache_multiple_records" %}  # [py>=313 and unix]
 
 test:
   source_files:
