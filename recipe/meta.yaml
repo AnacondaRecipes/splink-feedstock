@@ -70,6 +70,10 @@ test:
     - tests
   imports:
     - splink
+    - splink.comparison_library
+    - splink.comparison_level_library
+    - splink.internals
+    - splink.datasets
   requires:
     - pip
     - pytest >=7.3
